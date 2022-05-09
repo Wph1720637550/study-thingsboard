@@ -1,0 +1,22 @@
+thingsboard:
+	url: http://localhost:8080
+	default username: sysadmin@thingsboard.org
+	default password: sysadmin
+
+device: test01 token: 9yRXilaiX2QT2LSGdvrK
+curl -v -X POST -d "{\"temperature\": 25}" localhost:8080/api/v1/9yRXilaiX2QT2LSGdvrK/telemetry --header "Content-Type:application/json"
+
+customer user url http://localhost:8080/api/noauth/activate?activateToken=nF2cnIf7jTxvrd8x5k1xRaMofPKgcg
+
+http://localhost:8080/api/noauth/activate?activateToken=6iiDJhhhQQFOxDtJ9A5zC8pseXhaFT
+
+
+mqtt rpc: http://dljz.nicethemes.cn/news/show-29650.html
+
+rpc test:
+
+terminal1:
+curl -v -X GET http://localhost:8080/api/v1/CMskEH17NqQRgCvdnOd4/rpc?timeout=20000
+terminal2:
+connect
+curl -v -X POST -d @rpc-response.json http://localhost:8080/api/v1/CMskEH17NqQRgCvdnOd4/rpc/1 --header "Content-Type:application/json"
